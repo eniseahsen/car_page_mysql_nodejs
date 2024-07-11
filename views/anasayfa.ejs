@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="active">Anasayfa</a>
+            <a href="/iletisim">İletişim</a>
+            <a href="/izu">IZU Web Sayfası</a>
+            <a href="/add-car">Otomobil Ekle</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Otomobil Fiyatları</h1>
+        <form method="get" action="/">
+            <input type="text" name="kosul" value="<%= kosul %>" placeholder="marka">
+            <button type="submit">Ara</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marka</th>
+                    <th>Model</th>
+                    <th>Donanım</th>
+                    <th>Motor</th>
+                    <th>Yakıt</th>
+                    <th>Vites</th>
+                    <th>Fiyat</th>
+                    <th>Web Sitesi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cars.forEach(car => { %>
+                    <tr>
+                        <td><%= car.id %></td>
+                        <td><%= car.marka %></td>
+                        <td><%= car.model %></td>
+                        <td><%= car.donanim %></td>
+                        <td><%= car.motor %></td>
+                        <td><%= car.yakit %></td>
+                        <td><%= car.vites %></td>
+                        <td><%= car.fiyat %></td>
+                        <td><%= car.websitesi %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

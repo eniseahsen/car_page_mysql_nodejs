@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Otomobil Ekle</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Anasayfa</a>
+            <a href="/iletisim">İletişim</a>
+            <a href="/izu">IZU Web Sayfası</a>
+            <a href="/add-car" class="active">Otomobil Ekle</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Yeni Otomobil Ekle</h1>
+        <form method="post" action="/add-car">
+            <div>
+                <label for="id">ID:</label>
+                <input type="text" name="id" required>
+            </div>
+            <div>
+                <label for="marka">Marka:</label>
+                <input type="text" name="marka" required>
+            </div>
+            <div>
+                <label for="model">Model:</label>
+                <input type="text" name="model" required>
+            </div>
+            <div>
+                <label for="donanim">Donanım:</label>
+                <input type="text" name="donanim" required>
+            </div>
+            <div>
+                <label for="motor">Motor:</label>
+                <input type="text" name="motor" required>
+            </div>
+            <div>
+                <label for="yakit">Yakıt:</label>
+                <input type="text" name="yakit" required>
+            </div>
+            <div>
+                <label for="vites">Vites:</label>
+                <input type="text" name="vites" required>
+            </div>
+            <div>
+                <label for="fiyat">Fiyat:</label>
+                <input type="number" name="fiyat" required>
+            </div>
+            <div>
+                <label for="websitesi">Web Sitesi:</label>
+                <input type="text" name="websitesi" required>
+            </div>
+            <button type="submit">Ekle</button>
+        </form>
+    </main>
+</body>
+</html>
